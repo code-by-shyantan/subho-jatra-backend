@@ -1,0 +1,9 @@
+CREATE TABLE IF NOT EXISTS users (
+  id SERIAL PRIMARY KEY,
+  username VARCHAR(50) UNIQUE NOT NULL,
+  password_hash TEXT NOT NULL,
+  role VARCHAR(10) NOT NULL CHECK (role IN ('OWNER', 'MANAGER')),
+  is_active BOOLEAN DEFAULT TRUE,
+  permissions JSONB DEFAULT '{}'::jsonb,
+  created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
