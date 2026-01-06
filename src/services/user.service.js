@@ -1,4 +1,4 @@
-const pool = require('../../../database/db');
+const pool = require('../../../../database/db');
 
 exports.findByUsername = async (username) => {
   const result = await pool.query(
@@ -21,5 +21,6 @@ exports.updateManagerPermissions = async (username, permissions) => {
     [permissions, username, 'MANAGER']
   );
 };
+
 
 
