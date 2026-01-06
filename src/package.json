@@ -1,6 +1,6 @@
 {
   "name": "subho-jatra-backend",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Backend API for Subho Jatra Travel Agency Management System",
   "main": "app.js",
   "scripts": {
@@ -21,4 +21,5 @@
     "nodemon": "^3.0.3"
   }
 }
+
 
